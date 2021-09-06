@@ -1,0 +1,15 @@
+QT.ssh.VERSION = 4.3.1
+QT.ssh.name = QtSsh
+QT.ssh.module = Qt5Ssh
+QT.ssh.libs = $$QT_MODULE_LIB_BASE
+QT.ssh.includes = $$QT_MODULE_INCLUDE_BASE $$QT_MODULE_INCLUDE_BASE/QtSsh
+QT.ssh.frameworks =
+QT.ssh.bins = $$QT_MODULE_BIN_BASE
+QT.ssh.depends = core gui
+QT.ssh.uses =
+QT.ssh.module_config = v2
+QT.ssh.DEFINES = QT_SSH_LIB
+QT.ssh.enabled_features =
+QT.ssh.disabled_features =
+QT_CONFIG +=
+QT_MODULES += ssh

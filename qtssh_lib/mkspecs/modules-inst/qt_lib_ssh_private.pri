@@ -1,0 +1,11 @@
+QT.ssh_private.VERSION = 4.3.1
+QT.ssh_private.name = QtSsh
+QT.ssh_private.module =
+QT.ssh_private.libs = $$QT_MODULE_LIB_BASE
+QT.ssh_private.includes = $$QT_MODULE_INCLUDE_BASE/QtSsh/4.3.1 $$QT_MODULE_INCLUDE_BASE/QtSsh/4.3.1/QtSsh
+QT.ssh_private.frameworks =
+QT.ssh_private.depends = ssh
+QT.ssh_private.uses =
+QT.ssh_private.module_config = v2 internal_module
+QT.ssh_private.enabled_features =
+QT.ssh_private.disabled_features =
