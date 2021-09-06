@@ -4,11 +4,8 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
-
-include(ssh/ssh.pri)
-include(ssh/ssh_dependencies.pri)
-include(botan/botan.pri)
+QT       += core gui widgets
+QT       += network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,7 +23,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-
 SOURCES += \
         main.cpp \
         widgetmain.cpp
@@ -37,4 +33,8 @@ HEADERS += \
 FORMS += \
         widgetmain.ui
 
-RESOURCES +=
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/qtssh_lib/lib/ -lQt5Ssh
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/qtssh_lib/lib/ -lQt5Sshd
+
+INCLUDEPATH += $$PWD/qtssh_lib/include
+DEPENDPATH += $$PWD/qtssh_lib/include
